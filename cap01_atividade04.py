@@ -30,6 +30,8 @@ x = input("digite algo:  ")
 x = float(x)
 print(type(x))
 
+#teste
+
 
 
 
