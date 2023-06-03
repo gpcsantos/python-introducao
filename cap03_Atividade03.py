@@ -1,4 +1,6 @@
 
+import aforca
+import adivinhe
 
 print('***************************************')
 print('-------- Escolha seu Game! ------------')
@@ -10,6 +12,4 @@ jogo = int(input('Qual vai ser o game? '))
 if (jogo == 1):
     print('GG forca')
 elif (jogo == 2):
-    print('GG adivinhe')
-import aforca
-import adivinhe
+    adivinhe.gg()

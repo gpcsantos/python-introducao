@@ -1,4 +1,4 @@
-def gg():
+def gg(): #função
     print('***************************************')
     print('---------- Jogo da forca --------------')
     print('***************************************')
@@ -6,5 +6,6 @@ def gg():
     print('GG forca')
     print('\nObrigado por participar\n')
 
-if(__name__ == "__main__"):
+print(__name__)
+if __name__ == "__main__":
     gg()
