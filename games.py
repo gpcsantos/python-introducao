@@ -1,7 +1,6 @@
 import aforca
 import adivinhe
 from os import system
-system('cls')
 
 def escolha_jogo():
     print('***************************************')
@@ -17,4 +16,10 @@ def escolha_jogo():
         adivinhe.gg()
 
 if(__name__ == "__main__"):
-    escolha_jogo()
+    
+    while True:
+        system('cls')
+        escolha_jogo()
+        op = input('\nDeseja sair do jogo? [S]im [N]ão')
+        if op.upper() == 'S':
+            exit()

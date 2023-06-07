@@ -1,4 +1,5 @@
 from random import randint
+from desenhos import forca, vencedor, perdedor
 
 def imprime_abertura():
     print("*" * 28)
@@ -19,7 +20,6 @@ def carrega_palavra_secreta():
     return palavra_secreta
 
 def init_letras_acertadas(palavra_secreta):
-    #list comprehension : [ _ , _ , _ , _ , _ , _ ]
     return ['_' for letra in palavra_secreta]
 
 def verifica_letra_repetida(letras_acertas, letra):
@@ -39,10 +39,6 @@ def gg():
     acertou = False
     erros = 0
 
-    # enquanto não morreu E não acertou 
-    # enquanto não False
-    # enquanto (True)
-
     while(not morreu and not acertou):
         tentativa = input('Qual a letra? ').strip().upper()
         
@@ -60,20 +56,21 @@ def gg():
                     letras_acertadas[index] = letra
 
                 index += 1
-            print(letras_acertadas)
+            print(f'Seus acertos: {letras_acertadas}')
         else:
             erros += 1
             morreu = erros == 7
+            forca(erros)
         
         acertou = '_' not in letras_acertadas
+        print(f'Suas tentativas: {letras_tentativas}')
 
     if acertou:
-        print('Venceu!')
+        vencedor()
     else:
-        print('Perdeu!')
-
-    
+        perdedor(palavra_secreta)
         
+       
     print('GG forca')
 
     print('\nObrigado por participar!\n')
